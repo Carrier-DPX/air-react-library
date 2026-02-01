@@ -1,0 +1,122 @@
+import { BaseColors } from "../types/colors";
+
+export const airDarkColors = {
+  primary: {
+    main: "#4B87FB",
+    dark: "#D9E5FE",
+    light: "#0E49C7",
+    contrastText: "#0D2358",
+    containedHoverBackground: "#7AA7FC",
+    outlinedHoverBackground: "#0D2358",
+    outlinedRestingBorder: "#123B97",
+    selectedHover: "#123B97",
+  },
+  secondary: {
+    main: "#F4F5F5",
+    dark: "#EEEFEF",
+    light: "#616669",
+    contrastText: "#252728",
+    containedHoverBackground: "#FFFFFF",
+    outlinedHoverBackground: "#2E3132",
+    outlinedRestingBorder: "#3F4344",
+    selectedHover: "#3F4344",
+  },
+  error: {
+    main: "#F55246",
+    dark: "#FEE9E8",
+    light: "#C9180A",
+    contrastText: "#3D0703",
+    containedHoverBackground: "#F7766C",
+    outlinedHoverBackground: "#3D0703",
+    outlinedRestingBorder: "#871007",
+    content: "#FFFFFF",
+    background: "#630C05",
+    selectedHover: "#871007",
+  },
+  info: {
+    main: "#118EF1",
+    dark: "#E0F0FD",
+    light: "#0A68B1",
+    contrastText: "#042845",
+    containedHoverBackground: "#3DA3F4",
+    outlinedHoverBackground: "#042845",
+    outlinedRestingBorder: "#074475",
+    content: "#FFFFFF",
+    background: "#053155",
+    selectedHover: "#074475",
+  },
+  warning: {
+    main: "#FFC800",
+    dark: "#FFD641",
+    light: "#A68200",
+    contrastText: "#0D2358",
+    containedHoverBackground: "#FFD641",
+    outlinedHoverBackground: "#3B2E00",
+    outlinedRestingBorder: "#7D6200",
+    content: "#FFFFFF",
+    background: "#3B2E00",
+    selectedHover: "#4B3A00",
+  },
+  success: {
+    main: "#3E9E38",
+    dark: "#E2F4E1",
+    light: "#2D7429",
+    contrastText: "#112C10",
+    containedHoverBackground: "#4DBD46",
+    outlinedHoverBackground: "#112C10",
+    outlinedRestingBorder: "#1E4B1B",
+    content: "#FFFFFF",
+    background: "#163714",
+    selectedHover: "#1E4B1B",
+  },
+};
+
+export const baseDarkColors: BaseColors = {
+  dark: "#F1F3F5",
+  light: "#64686B",
+  main: "#DCDEE0",
+  contrastText: "#1F2326",
+  backdropOverlay: "#54595BB8",
+  divider: "#434749",
+  standardInputLine: "#434749",
+  background: {
+    accent: "#282C2F",
+    appBar: "#1F2326",
+    paper: "#1F2326",
+    skeleton: "#303537",
+    snackbar: "#C4D7FE",
+  },
+  common: {
+    black: "#000000",
+    white: "#FFFFFF",
+  },
+  filledInput: {
+    background: "#303537",
+    backgroundHover: "#434749",
+    outlinedBorder: "#434749",
+    outlinedBorderHover: "#64686B",
+    placeholderLabel: "#64686B",
+    required: "#F55246",
+  },
+  text: {
+    primary: "#F1F3F5",
+    secondary: "#B9BCBE",
+    disabled: "#64686B",
+  },
+  state: {
+    hover: "#F1F3F50F",
+    disabledBackground: "#303537",
+    disabledContent: "#54595B",
+    selected: "#303537",
+    selectedHover: "#434749",
+    focus: "#434749",
+    active: "#B9BCBE",
+  },
+};
+
+export const airDarkPalette = {
+  ...airDarkColors,
+  base: baseDarkColors,
+};
+
+export default airDarkPalette;

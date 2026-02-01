@@ -1,0 +1,122 @@
+import { BaseColors } from "../types/colors";
+
+export const bootstrapColors = {
+  primary: {
+    main: "#0659F9",
+    dark: "#102B6E",
+    light: "#7AA7FC",
+    contrastText: "#FFFFFF",
+    containedHoverBackground: "#0E49C7",
+    outlinedHoverBackground: "#EEF3FF",
+    outlinedRestingBorder: "#A4C3FD",
+    selectedHover: "#D9E5FE",
+  },
+  secondary: {
+    main: "#3F4344",
+    dark: "#252728",
+    light: "#999EA1",
+    contrastText: "#FFFFFF",
+    containedHoverBackground: "#2E3132",
+    outlinedHoverBackground: "#F4F5F5",
+    outlinedRestingBorder: "#C0C3C5",
+    selectedHover: "#EEEFEF",
+  },
+  error: {
+    main: "#E71B0C",
+    dark: "#630C05",
+    light: "#F7766C",
+    contrastText: "#FFFFFF",
+    containedHoverBackground: "#C9180A",
+    outlinedHoverBackground: "#FEF4F3",
+    outlinedRestingBorder: "#FBAFA9",
+    content: "#3D0703",
+    background: "#FEF4F3",
+    selectedHover: "#FEE9E8",
+  },
+  info: {
+    main: "#0C77CD",
+    dark: "#053155",
+    light: "#3DA3F4",
+    contrastText: "#FFFFFF",
+    containedHoverBackground: "#0A68B1",
+    outlinedHoverBackground: "#EDF7FE",
+    outlinedRestingBorder: "#8CC9F8",
+    content: "#042845",
+    background: "#EDF7FE",
+    selectedHover: "#E0F0FD",
+  },
+  warning: {
+    main: "#FFC800",
+    dark: "#7D6200",
+    light: "#FFD641",
+    contrastText: "#302500",
+    containedHoverBackground: "#EDBA00",
+    outlinedHoverBackground: "#FFF5D0",
+    outlinedRestingBorder: "#FFD641",
+    content: "#302500",
+    background: "#FFF5D0",
+    selectedHover: "#FFEEB2",
+  },
+  success: {
+    main: "#33862F",
+    dark: "#163714",
+    light: "#4DBD46",
+    contrastText: "#FFFFFF",
+    containedHoverBackground: "#2D7429",
+    outlinedHoverBackground: "#EDF8EC",
+    outlinedRestingBorder: "#8AD485",
+    content: "#112C10",
+    background: "#EDF8EC",
+    selectedHover: "#E2F4E1",
+  },
+};
+
+export const base: BaseColors = {
+  dark: "#141618",
+  light: "#999D9F",
+  main: "#434749",
+  contrastText: "#FFFFFF",
+  backdropOverlay: "#14161899",
+  divider: "#DCDEE0",
+  standardInputLine: "#D5D8D9",
+  background: {
+    accent: "#F6F8FA",
+    appBar: "#FFFFFF",
+    paper: "#FFFFFF",
+    skeleton: "#F1F3F5",
+    snackbar: "#0D2358",
+  },
+  common: {
+    black: "#000000",
+    white: "#FFFFFF",
+  },
+  filledInput: {
+    background: "#F1F3F5",
+    backgroundHover: "#E7E9EB",
+    outlinedBorder: "#D5D8D9",
+    outlinedBorderHover: "#999D9F",
+    placeholderLabel: "#999D9F",
+    required: "#E71B0C",
+  },
+  text: {
+    primary: "#141618",
+    secondary: "#64686B",
+    disabled: "#999D9F",
+  },
+  state: {
+    hover: "#1416180A",
+    disabledBackground: "#F1F3F5",
+    disabledContent: "#B9BCBE",
+    selected: "#F1F3F5",
+    selectedHover: "#E7E9EB",
+    focus: "#DCDEE0",
+    active: "#64686B",
+  },
+};
+
+export const fleetPalette = {
+  ...bootstrapColors,
+  base: base,
+};
+
+export default fleetPalette;

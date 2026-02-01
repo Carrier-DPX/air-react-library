@@ -18,6 +18,35 @@ npm install react react-dom @mui/material @emotion/react @emotion/styled
 
 ## Usage
 
+### Quick Start with Theme
+
+**Important:** To get the correct Carrier DPX colors and styling, wrap your app with the `FleetThemeProvider`:
+
+```tsx
+import { Button, FleetThemeProvider } from '@carrier-dpx/air-react-library';
+
+function App() {
+  return (
+    <FleetThemeProvider theme="AirLight">
+      <Button
+        variant="contained"
+        color="primary"
+        size="large"
+        onClick={() => console.log('clicked')}
+      >
+        Get Started
+      </Button>
+    </FleetThemeProvider>
+  );
+}
+```
+
+### Available Themes
+
+- `"AirLight"` - Light theme (default)
+- `"AirDark"` - Dark theme
+- `"AHP"` - AHP theme
+
 ### Button Component
 
 ```tsx
