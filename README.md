@@ -80,6 +80,30 @@ function App() {
 - `onClick`: `() => void` - Click handler
 - All standard Material-UI Button props
 
+### Typography Component
+
+```tsx
+import { Typography } from '@carrier-dpx/air-react-library';
+
+function App() {
+  return (
+    <>
+      <Typography variant="h1">Heading 1</Typography>
+      <Typography variant="body1">Regular body text</Typography>
+      <Typography variant="body1Semibold">Semibold body text</Typography>
+      <Typography variant="caps2">UPPERCASE TEXT</Typography>
+    </>
+  );
+}
+```
+
+#### Available Typography Variants
+
+- **Headings**: `h1`, `h2`, `h3`, `h4`, `h5`, `h6`
+- **Body**: `body1`, `body1Semibold`, `body1Bold`, `body2`, `body2Semibold`, `body2Bold`, `body3`, `body3Semibold`, `body3Bold`
+- **Caps**: `caps1`, `caps1Bold`, `caps2`, `caps2Bold`, `caps3`, `caps3Bold`, `caps4`, `caps4Bold`
+- All standard Material-UI Typography props
+
 ## Figma Integration
 
 This library is integrated with Figma Code Connect. When using Figma Make, components from this library will be automatically suggested and used in generated code.
@@ -89,6 +113,7 @@ This library is integrated with Figma Code Connect. When using Figma Make, compo
 Currently available components:
 
 - **Button** - Material-UI based button component with Carrier DPX design system styling
+- **Typography** - Text component with all Carrier DPX typography variants (h1-h6, body1-3, caps, etc.)
 
 More components coming soon!
 
