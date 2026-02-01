@@ -92,10 +92,10 @@ figma.connect(
 
       /**
        * BUTTON TEXT/CHILDREN
-       * Maps the text content from Figma's "Text" property
-       * This is the editable text label in your Figma component
+       * Maps the text content from the "Button Label" layer
+       * Uses figma.children() to capture nested text content
        */
-      children: figma.string("Text"),
+      children: figma.children("Button Label"),
 
       /**
        * START ICON
