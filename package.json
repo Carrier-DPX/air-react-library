@@ -1,0 +1,34 @@
+{
+  "name": "@carrier-dpx/air-react-library",
+  "version": "0.1.0",
+  "description": "Air web React component library for Figma Make",
+  "main": "src/index.ts",
+  "scripts": {
+    "figma:connect": "figma connect",
+    "figma:publish": "figma connect publish"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "figma",
+    "code-connect"
+  ],
+  "author": "Carrier DPX",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "@mui/material": "^5.0.0",
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0"
+  },
+  "devDependencies": {
+    "@figma/code-connect": "^1.0.0",
+    "@mui/material": "^5.15.0",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0"
+  }
+}
