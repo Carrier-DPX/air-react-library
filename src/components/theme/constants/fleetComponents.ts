@@ -78,6 +78,7 @@ const fleetComponents: Components = {
     },
     styleOverrides: {
       root: {
+        textTransform: "none",
         "&.MuiButton-sizeXsmall": {
           ...fleetTypography.body3Bold,
           height: "24px",

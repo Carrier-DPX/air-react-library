@@ -90,7 +90,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           } as CSSObject)
         }
         style={{
-          textTransform: "unset",
           border: variant === "text" ? "none" : "",
         }}
         {...rest}
