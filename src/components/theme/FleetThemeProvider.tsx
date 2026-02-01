@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
 import { Theme, ThemeProvider, createTheme } from "@mui/material/styles";
 import { airDarkThemeOptions, fleetThemeOptions } from "./fleetThemeOptions";
 
@@ -31,6 +31,17 @@ const FleetThemeProvider: React.FC<ThemeProviderProps> = ({
   theme = airLightTheme, // Default to airLightTheme
 }) => {
   const resolvedTheme = typeof theme === "string" ? ThemeMap[theme] : theme;
+
+  // Load Nunito Sans font
+  useEffect(() => {
+    // Check if font is already loaded
+    if (!document.querySelector('link[href*="Nunito+Sans"]')) {
+      const link = document.createElement('link');
+      link.href = 'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap';
+      link.rel = 'stylesheet';
+      document.head.appendChild(link);
+    }
+  }, []);
 
   return <ThemeProvider theme={resolvedTheme}>{children}</ThemeProvider>;
 };
