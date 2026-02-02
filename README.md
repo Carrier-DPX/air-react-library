@@ -154,6 +154,9 @@ Currently available components:
 - **Button** - Material-UI based button component with Carrier DPX design system styling
 - **Typography** - Text component with all Carrier DPX typography variants (h1-h6, body1-3, caps, etc.)
 - **TextField** - Input field component with Carrier DPX styling (supports multiple sizes, colors, validation states)
+- **Link** - Hyperlink component with typography variants and underline options
+- **Divider** - Horizontal and vertical divider lines (with optional text labels)
+- **Copyright** - Copyright notice component (automatically adds © and current year)
 
 More components coming soon!
 
