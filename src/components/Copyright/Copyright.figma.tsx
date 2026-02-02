@@ -9,19 +9,11 @@ figma.connect(
   Copyright,
   "https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=37592-67050",
   {
-    props: {
-      /**
-       * TEXT CONTENT
-       * Copyright component shows © {year} {text}
-       * The year is automatically generated, so we just need the text
-       */
-      text: figma.string("*"),
-    },
-
     /**
      * CODE EXAMPLE TEMPLATE
      * Copyright automatically adds © symbol and current year
+     * Since Figma component has no props, we provide a default example
      */
-    example: ({ text }) => <Copyright text={text} />,
+    example: () => <Copyright text="Carrier" />,
   }
 );
