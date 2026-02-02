@@ -104,6 +104,45 @@ function App() {
 - **Caps**: `caps1`, `caps1Bold`, `caps2`, `caps2Bold`, `caps3`, `caps3Bold`, `caps4`, `caps4Bold`
 - All standard Material-UI Typography props
 
+### TextField Component
+
+```tsx
+import { TextField } from '@carrier-dpx/air-react-library';
+
+function App() {
+  return (
+    <>
+      <TextField
+        label="Email"
+        placeholder="Enter your email"
+        size="large"
+        showBorder
+      />
+      <TextField
+        label="Password"
+        type="password"
+        placeholder="Enter your password"
+        size="large"
+        error
+        helperText="Password is required"
+      />
+    </>
+  );
+}
+```
+
+#### Available TextField Props
+
+- **size**: `xlarge`, `large` (default), `medium`, `small`
+- **color**: `primary`, `error`, `success`, `warning`, `info`
+- **error**: `boolean` - Shows error state
+- **disabled**: `boolean` - Disables the field
+- **showBorder**: `boolean` - Shows border around field
+- **hideBackgroundColor**: `boolean` - Removes background color
+- **characterCounter**: `boolean` - Shows character count
+- **characterMax**: `number` - Max character limit
+- All standard Material-UI TextField props
+
 ## Figma Integration
 
 This library is integrated with Figma Code Connect. When using Figma Make, components from this library will be automatically suggested and used in generated code.
@@ -114,6 +153,7 @@ Currently available components:
 
 - **Button** - Material-UI based button component with Carrier DPX design system styling
 - **Typography** - Text component with all Carrier DPX typography variants (h1-h6, body1-3, caps, etc.)
+- **TextField** - Input field component with Carrier DPX styling (supports multiple sizes, colors, validation states)
 
 More components coming soon!
 
