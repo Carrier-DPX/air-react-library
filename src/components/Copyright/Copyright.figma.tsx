@@ -22,6 +22,6 @@ figma.connect(
      * CODE EXAMPLE TEMPLATE
      * Copyright automatically adds © symbol and current year
      */
-    example: ({ text }) => <Copyright text={text || "Carrier"} />,
+    example: ({ text }) => <Copyright text={text} />,
   }
 );
