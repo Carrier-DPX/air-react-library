@@ -10,4 +10,6 @@ export { default as Divider } from "./components/Divider";
 export type { DividerProps } from "./components/Divider";
 export { default as Copyright } from "./components/Copyright";
 export type { CopyrightProps } from "./components/Copyright";
+export { default as Icon } from "./components/Icon";
+export type { IconProps } from "./components/Icon";
 export * from "./components/theme";
