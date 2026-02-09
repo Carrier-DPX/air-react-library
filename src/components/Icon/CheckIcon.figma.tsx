@@ -13,20 +13,21 @@ import Icon from "./Icon";
 // Placeholder - replace with actual CheckIcon import
 const CheckIcon = ({ variant, ...props }: any) => <span {...props}>CheckIcon</span>;
 
-figma.connect(
-  CheckIcon,
-  "https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=CHECK-ICON-NODE-ID",
-  {
-    props: {
-      variant: figma.enum("variant", {
-        outlined: "outlined",
-        filled: "filled",
-      }),
-    },
-    example: ({ variant }) => (
-      <Icon fontSize="medium">
-        <CheckIcon variant={variant} />
-      </Icon>
-    ),
-  }
-);
+// TODO: Uncomment and update with real Figma URL when ready
+// figma.connect(
+//   CheckIcon,
+//   "https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=CHECK-ICON-NODE-ID",
+//   {
+//     props: {
+//       variant: figma.enum("variant", {
+//         outlined: "outlined",
+//         filled: "filled",
+//       }),
+//     },
+//     example: ({ variant }) => (
+//       <Icon fontSize="medium">
+//         <CheckIcon variant={variant} />
+//       </Icon>
+//     ),
+//   }
+// );

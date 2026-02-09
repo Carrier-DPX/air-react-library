@@ -13,20 +13,21 @@ import Icon from "./Icon";
 // Placeholder - replace with actual CloseIcon import
 const CloseIcon = ({ variant, ...props }: any) => <span {...props}>CloseIcon</span>;
 
-figma.connect(
-  CloseIcon,
-  "https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=CLOSE-ICON-NODE-ID",
-  {
-    props: {
-      variant: figma.enum("variant", {
-        outlined: "outlined",
-        filled: "filled",
-      }),
-    },
-    example: ({ variant }) => (
-      <Icon fontSize="medium">
-        <CloseIcon variant={variant} />
-      </Icon>
-    ),
-  }
-);
+// TODO: Uncomment and update with real Figma URL when ready
+// figma.connect(
+//   CloseIcon,
+//   "https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=CLOSE-ICON-NODE-ID",
+//   {
+//     props: {
+//       variant: figma.enum("variant", {
+//         outlined: "outlined",
+//         filled: "filled",
+//       }),
+//     },
+//     example: ({ variant }) => (
+//       <Icon fontSize="medium">
+//         <CloseIcon variant={variant} />
+//       </Icon>
+//     ),
+//   }
+// );

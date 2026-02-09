@@ -13,20 +13,21 @@ import Icon from "./Icon";
 // Placeholder - replace with actual MenuIcon import
 const MenuIcon = ({ variant, ...props }: any) => <span {...props}>MenuIcon</span>;
 
-figma.connect(
-  MenuIcon,
-  "https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=MENU-ICON-NODE-ID",
-  {
-    props: {
-      variant: figma.enum("variant", {
-        outlined: "outlined",
-        filled: "filled",
-      }),
-    },
-    example: ({ variant }) => (
-      <Icon fontSize="medium">
-        <MenuIcon variant={variant} />
-      </Icon>
-    ),
-  }
-);
+// TODO: Uncomment and update with real Figma URL when ready
+// figma.connect(
+//   MenuIcon,
+//   "https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=MENU-ICON-NODE-ID",
+//   {
+//     props: {
+//       variant: figma.enum("variant", {
+//         outlined: "outlined",
+//         filled: "filled",
+//       }),
+//     },
+//     example: ({ variant }) => (
+//       <Icon fontSize="medium">
+//         <MenuIcon variant={variant} />
+//       </Icon>
+//     ),
+//   }
+// );

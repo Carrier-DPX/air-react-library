@@ -13,20 +13,21 @@ import Icon from "./Icon";
 // Placeholder - replace with actual SearchIcon import
 const SearchIcon = ({ variant, ...props }: any) => <span {...props}>SearchIcon</span>;
 
-figma.connect(
-  SearchIcon,
-  "https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=SEARCH-ICON-NODE-ID",
-  {
-    props: {
-      variant: figma.enum("variant", {
-        outlined: "outlined",
-        filled: "filled",
-      }),
-    },
-    example: ({ variant }) => (
-      <Icon fontSize="medium">
-        <SearchIcon variant={variant} />
-      </Icon>
-    ),
-  }
-);
+// TODO: Uncomment and update with real Figma URL when ready
+// figma.connect(
+//   SearchIcon,
+//   "https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=SEARCH-ICON-NODE-ID",
+//   {
+//     props: {
+//       variant: figma.enum("variant", {
+//         outlined: "outlined",
+//         filled: "filled",
+//       }),
+//     },
+//     example: ({ variant }) => (
+//       <Icon fontSize="medium">
+//         <SearchIcon variant={variant} />
+//       </Icon>
+//     ),
+//   }
+// );

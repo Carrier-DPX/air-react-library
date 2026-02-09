@@ -4,7 +4,7 @@
  * This connects Figma's SettingsIcon component to the React SettingsIcon component.
  * The icon component is wrapped in the Icon wrapper for fontSize control.
  * 
- * Figma URL: https://www.figma.com/design/RT43n0bKuuIt7ylllD3DR0/Icon-Library?node-id=1401-6386
+ * Figma URL: https://www.figma.com/design/RT43n0bKuuIt7ylllD3DR0/Icon-Library?node-id=31-2
  * 
  * NOTE: Import SettingsIcon from your actual icon library package.
  * Example: import { SettingsIcon } from '@carrier-io/icons';
@@ -20,7 +20,7 @@ const SettingsIcon = ({ variant, ...props }: any) => <span {...props}>SettingsIc
 
 figma.connect(
   SettingsIcon,
-  "https://www.figma.com/design/RT43n0bKuuIt7ylllD3DR0/Icon-Library?node-id=1401-6386",
+  "https://www.figma.com/design/RT43n0bKuuIt7ylllD3DR0/Icon-Library?node-id=31-2",
   {
     props: {
       /**

@@ -13,20 +13,21 @@ import Icon from "./Icon";
 // Placeholder - replace with actual ArrowLeftIcon import
 const ArrowLeftIcon = ({ variant, ...props }: any) => <span {...props}>ArrowLeftIcon</span>;
 
-figma.connect(
-  ArrowLeftIcon,
-  "https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=ARROW-LEFT-ICON-NODE-ID",
-  {
-    props: {
-      variant: figma.enum("variant", {
-        outlined: "outlined",
-        filled: "filled",
-      }),
-    },
-    example: ({ variant }) => (
-      <Icon fontSize="medium">
-        <ArrowLeftIcon variant={variant} />
-      </Icon>
-    ),
-  }
-);
+// TODO: Uncomment and update with real Figma URL when ready
+// figma.connect(
+//   ArrowLeftIcon,
+//   "https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=ARROW-LEFT-ICON-NODE-ID",
+//   {
+//     props: {
+//       variant: figma.enum("variant", {
+//         outlined: "outlined",
+//         filled: "filled",
+//       }),
+//     },
+//     example: ({ variant }) => (
+//       <Icon fontSize="medium">
+//         <ArrowLeftIcon variant={variant} />
+//       </Icon>
+//     ),
+//   }
+// );
