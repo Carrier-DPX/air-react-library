@@ -1,10 +1,10 @@
 import { FC, SVGProps } from "react";
 
-export interface WarningIconProps extends SVGProps<SVGSVGElement> {
+export interface WarningTriangleProps extends SVGProps<SVGSVGElement> {
   variant?: "outlined" | "filled";
 }
 
-export const WarningIcon: FC<WarningIconProps> = ({ variant = "outlined", ...props }) => {
+export const WarningTriangle: FC<WarningTriangleProps> = ({ variant = "outlined", ...props }) => {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
       <path d="M12 16C12.2833 16 12.5212 16.0954 12.7129 16.2871C12.9046 16.4788 13 16.7167 13 17C13 17.2833 12.9046 17.5212 12.7129 17.7129C12.5212 17.9046 12.2833 18 12 18C11.7167 18 11.4788 17.9045 11.2871 17.7129C11.0955 17.5212 11 17.2833 11 17C11 16.7167 11.0955 16.4788 11.2871 16.2871C11.4788 16.0955 11.7167 16 12 16Z" fill="currentColor"/>

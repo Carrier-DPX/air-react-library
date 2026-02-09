@@ -50,11 +50,13 @@ figma.connect(
 
       /**
        * LABEL TEXT
-       * Maps text content from "Label" layer to React label prop
-       * Similar to Button component which uses figma.children("Button Label")
+       * Maps text property "✏️ Label" from BottomNavigationAction component
+       * This requires the "✏️ Label" text property to be surfaced from the "Label" layer
+       * Similar to Navbar Item which uses figma.string("✏️ Label")
        * The label is rendered as a Typography component in React
        */
-      label: figma.children("Label"),
+      label: figma.string("✏️ Label"),
+
 
       /**
        * ICON NESTED PROPERTIES

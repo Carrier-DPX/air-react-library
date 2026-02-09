@@ -45,8 +45,7 @@ const WarningSvg: FC<React.SVGProps<SVGSVGElement>> = (props) => (
   </svg>
 );
 
-// AlertIcon uses the same SVG as WarningIcon
-const AlertSvg = WarningSvg;
+// WarningTriangle SVG (previously WarningIcon)
 
 export interface IconInfo {
   name: string;
@@ -70,14 +69,9 @@ export const iconRegistry: Record<string, IconInfo> = {
     component: SiteSvg,
     variant: "outlined",
   },
-  warning: {
-    name: "warning",
+  warningtriangle: {
+    name: "warningtriangle",
     component: WarningSvg,
-    variant: "outlined",
-  },
-  alert: {
-    name: "alert",
-    component: AlertSvg,
     variant: "outlined",
   },
 };

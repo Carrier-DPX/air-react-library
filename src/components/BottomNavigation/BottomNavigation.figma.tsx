@@ -11,6 +11,7 @@
 
 import figma from "@figma/code-connect";
 import BottomNavigation from "./BottomNavigation";
+// Import BottomNavigationAction so Figma Code Connect can resolve component instances
 import BottomNavigationAction from "./BottomNavigationAction";
 
 figma.connect(
@@ -29,25 +30,33 @@ figma.connect(
         "selected-only": "Selected Only",
         off: "Off",
       }),
-
       /**
        * CHILDREN
-       * Maps BottomNavigationAction instances as children
-       * Use figma.instance() if BottomNavigationAction is an instance swap property
+       * Maps nested BottomNavigationAction instances from Figma
+       * Each "Nav Item X" is an instance of the BottomNavigationAction component
+       * We map each one individually using the exact layer names, then combine them
        */
-      children: figma.instance("BottomNavigationAction"),
+      navItem1: figma.children("Nav Item 1"),
+      navItem2: figma.children("Nav Item 2"),
+      navItem3: figma.children("Nav Item 3"),
+      navItem4: figma.children("Nav Item 4"),
+      navItem5: figma.children("Nav Item 5"),
     },
     /**
      * EXAMPLE CODE TEMPLATE
      * Shows how BottomNavigation should be used with BottomNavigationAction children
      */
-    example: ({ showLabel, children }) => (
+    example: ({ showLabel, navItem1, navItem2, navItem3, navItem4, navItem5 }) => (
       <BottomNavigation
         showLabel={showLabel}
         value={0}
         onChange={() => {}}
       >
-        {children}
+        {navItem1}
+        {navItem2}
+        {navItem3}
+        {navItem4}
+        {navItem5}
       </BottomNavigation>
     ),
   }

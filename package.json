@@ -16,8 +16,8 @@
     "access": "public"
   },
   "scripts": {
-    "figma:connect": "figma connect",
-    "figma:publish": "figma connect publish"
+    "figma:connect": "npx figma connect",
+    "figma:publish": "npx figma connect publish"
   },
   "keywords": [
     "react",
@@ -41,7 +41,7 @@
   "devDependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
-    "@figma/code-connect": "^1.0.0",
+    "@figma/code-connect": "^1.3.13",
     "@mui/material": "^5.15.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",

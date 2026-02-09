@@ -16,8 +16,5 @@ export type { HomeIconProps } from "./HomeIcon";
 export { SiteIcon } from "./SiteIcon";
 export type { SiteIconProps } from "./SiteIcon";
 
-export { WarningIcon } from "./WarningIcon";
-export type { WarningIconProps } from "./WarningIcon";
-
-export { AlertIcon } from "./AlertIcon";
-export type { AlertIconProps } from "./AlertIcon";
+export { WarningTriangle } from "./WarningTriangle";
+export type { WarningTriangleProps } from "./WarningTriangle";

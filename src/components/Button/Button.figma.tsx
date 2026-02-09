@@ -92,10 +92,11 @@ figma.connect(
 
       /**
        * BUTTON TEXT/CHILDREN
-       * Maps the text content from the "Button Label" layer
-       * Uses figma.children() to capture nested text content
+       * Maps text property "✏️ Text" from Button component
+       * The text property must be surfaced from the "Button Label" layer
+       * Similar to BottomNavigationAction which uses figma.string("✏️ Label")
        */
-      children: figma.children("Button Label"),
+      children: figma.string("✏️ Text"),
 
       /**
        * START ICON

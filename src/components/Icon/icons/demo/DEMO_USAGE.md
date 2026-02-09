@@ -7,7 +7,7 @@ This guide shows how to use the demo icons in BottomNavigation for your Leadersh
 - `devicemanager` - Device Manager icon
 - `home` - Home icon  
 - `site` - Site icon
-- `warning` - Warning icon
+- `warningtriangle` - Warning triangle icon
 
 ## Usage in BottomNavigation
 
@@ -53,7 +53,7 @@ function DemoBottomNavigation() {
       <BottomNavigationAction
         icon={
           <Icon fontSize="medium">
-            <SvgIcon name="warning" />
+            <SvgIcon name="warningtriangle" />
           </Icon>
         }
         label={<Typography variant="body3Semibold">Alerts</Typography>}
@@ -69,7 +69,7 @@ function DemoBottomNavigation() {
 If you prefer individual components (already created):
 
 ```tsx
-import { DeviceManagerIcon, HomeIcon, SiteIcon, WarningIcon } from './icons/demo';
+import { DeviceManagerIcon, HomeIcon, SiteIcon, WarningTriangle } from './icons/demo';
 
 // Usage:
 <Icon fontSize="medium">

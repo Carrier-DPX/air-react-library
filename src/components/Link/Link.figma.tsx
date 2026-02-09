@@ -52,9 +52,11 @@ figma.connect(
 
       /**
        * TEXT CONTENT
-       * Maps the link text from "Label" layer
+       * Maps text property "✏️ Text" from Link component
+       * The text property must be surfaced from the "Label" layer
+       * Similar to Button and BottomNavigationAction which use surfaced text properties
        */
-      children: figma.children("Label"),
+      children: figma.string("✏️ Text"),
     },
 
     /**

@@ -1,16 +1,16 @@
 /**
- * Figma Code Connect Configuration for SiteIcon
+ * Figma Code Connect Configuration for WarningTriangle
  * 
- * TODO: Update the Figma URL below with the actual Figma component URL
+ * This connects Figma's warning_triangle icon component to the React WarningTriangle component.
  */
 
 import figma from "@figma/code-connect";
 import Icon from "../../Icon";
-import { SiteIcon } from "./SiteIcon";
+import { WarningTriangle } from "./WarningTriangle";
 
 figma.connect(
-  SiteIcon,
-  "https://www.figma.com/design/RT43n0bKuuIt7ylllD3DR0/Icon-Library?node-id=76-846",
+  WarningTriangle,
+  "https://www.figma.com/design/RT43n0bKuuIt7ylllD3DR0/Icon-Library?node-id=29-54",
   {
     props: {
       /**
@@ -26,7 +26,7 @@ figma.connect(
     },
     example: ({ variant }) => (
       <Icon fontSize="medium">
-        <SiteIcon variant={variant} />
+        <WarningTriangle variant={variant} />
       </Icon>
     ),
   }

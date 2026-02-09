@@ -19,12 +19,12 @@ figma.connect(
   {
     props: {
       /**
-       * STATE/VARIANT MAPPING
-       * Maps Figma's "State" property to React's "variant" prop
-       * Figma: State="Outlined" → React: variant="outlined"
-       * Figma: State="Filled" → React: variant="filled"
+       * STYLE/VARIANT MAPPING
+       * Maps Figma's "Style" property to React's "variant" prop
+       * Figma: Style="Outlined" → React: variant="outlined"
+       * Figma: Style="Filled" → React: variant="filled"
        */
-      variant: figma.enum("State", {
+      variant: figma.enum("Style", {
         Outlined: "outlined",
         Filled: "filled",
       }),
