@@ -1,6 +1,6 @@
 {
   "name": "@carrier-dpx/air-react-library",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Air web React component library for Figma Make",
   "main": "src/index.ts",
   "types": "src/index.ts",
