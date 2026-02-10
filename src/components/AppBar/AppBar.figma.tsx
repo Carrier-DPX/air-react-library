@@ -52,32 +52,21 @@ figma.connect(
        * Maps Figma's "elevation" boolean property to React's "elevation" prop
        */
       elevation: figma.boolean("elevation"),
-
-      /**
-       * POSITION
-       * AppBar position prop (optional)
-       */
-      position: figma.enum("position", {
-        static: "static",
-        fixed: "fixed",
-        absolute: "absolute",
-        sticky: "sticky",
-        relative: "relative",
-      }),
     },
 
     /**
      * CODE EXAMPLE TEMPLATE
      * 
      * Shows how AppBar should be used with Toolbar and content
+     * Note: position is set to "static" by default (not mapped from Figma)
      */
-    example: ({ size, color, divider, elevation, position }) => (
+    example: ({ size, color, divider, elevation }) => (
       <AppBar 
         size={size} 
         color={color} 
         divider={divider} 
         elevation={elevation}
-        position={position}
+        position="static"
       >
         <Toolbar>
           <IconButton
