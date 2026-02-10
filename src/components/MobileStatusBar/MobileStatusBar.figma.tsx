@@ -11,14 +11,6 @@ figma.connect(
   MobileStatusBar,
   "https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=40383-1657",
   {
-    props: {
-      time: figma.string("time"),
-      position: figma.enum("position", {
-        fixed: "fixed",
-        relative: "relative",
-        static: "static",
-      }),
-    },
-    example: (props) => <MobileStatusBar time={props.time ?? "9:41"} position={props.position} />,
+    example: () => <MobileStatusBar time="9:41" position="fixed" />,
   }
 );

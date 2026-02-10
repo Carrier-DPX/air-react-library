@@ -96,7 +96,7 @@ export interface MobileStatusBarProps {
  * import { MobileStatusBar } from '@carrier-dpx/air-react-library'
  */
 const MobileStatusBar = forwardRef<HTMLDivElement, MobileStatusBarProps>(
-  ({ time = "9:41", position = "relative", sx, ...rest }, ref) => {
+  ({ time = "9:41", position = "fixed", sx, ...rest }, ref) => {
     const theme = useTheme();
     const iconColor = theme.palette.common?.black ?? "#000000";
 
@@ -116,7 +116,7 @@ const MobileStatusBar = forwardRef<HTMLDivElement, MobileStatusBarProps>(
         {...rest}
       >
         <Typography
-          variant="body1Semibold"
+          variant="body1Bold"
           sx={{ color: iconColor }}
         >
           {time}
