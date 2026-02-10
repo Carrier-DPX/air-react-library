@@ -45,6 +45,22 @@ const WarningSvg: FC<React.SVGProps<SVGSVGElement>> = ({ style, ...props }) => (
   </svg>
 );
 
+const MenuSvg: FC<React.SVGProps<SVGSVGElement>> = ({ style, ...props }) => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: "1em", height: "1em", display: "block", ...style }} {...props}>
+    <path d="M20 16C20.5523 16 21 16.4477 21 17C21 17.5523 20.5523 18 20 18H4C3.44772 18 3 17.5523 3 17C3 16.4477 3.44772 16 4 16H20Z" fill="currentColor"/>
+    <path d="M20 11C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H20Z" fill="currentColor"/>
+    <path d="M20 6C20.5523 6 21 6.44772 21 7C21 7.55228 20.5523 8 20 8H4C3.44772 8 3 7.55228 3 7C3 6.44772 3.44772 6 4 6H20Z" fill="currentColor"/>
+  </svg>
+);
+
+const MoreVerticalSvg: FC<React.SVGProps<SVGSVGElement>> = ({ style, ...props }) => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: "1em", height: "1em", display: "block", ...style }} {...props}>
+    <path d="M12 16C13.1 16 14 16.9 14 18C14 19.1 13.1 20 12 20C10.9 20 10 19.1 10 18C10 16.9 10.9 16 12 16Z" fill="currentColor"/>
+    <path d="M12 10C13.1 10 14 10.9 14 12C14 13.1 13.1 14 12 14C10.9 14 10 13.1 10 12C10 10.9 10.9 10 12 10Z" fill="currentColor"/>
+    <path d="M12 4C13.1 4 14 4.9 14 6C14 7.1 13.1 8 12 8C10.9 8 10 7.1 10 6C10 4.9 10.9 4 12 4Z" fill="currentColor"/>
+  </svg>
+);
+
 // WarningTriangle SVG (previously WarningIcon)
 
 export interface IconInfo {
@@ -72,6 +88,16 @@ export const iconRegistry: Record<string, IconInfo> = {
   warningtriangle: {
     name: "warningtriangle",
     component: WarningSvg,
+    variant: "outlined",
+  },
+  menu: {
+    name: "menu",
+    component: MenuSvg,
+    variant: "outlined",
+  },
+  morevertical: {
+    name: "morevertical",
+    component: MoreVerticalSvg,
     variant: "outlined",
   },
 };

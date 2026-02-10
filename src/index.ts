@@ -22,6 +22,8 @@ export { default as BottomNavigation } from "./components/BottomNavigation";
 export { default as BottomNavigationAction } from "./components/BottomNavigation/BottomNavigationAction";
 export type { BottomNavigationProps } from "./components/BottomNavigation";
 export type { BottomNavigationActionProps } from "./components/BottomNavigation/BottomNavigationAction";
+export { default as AppBar } from "./components/AppBar";
+export type { AppBarProps } from "./components/AppBar";
 export * from "./components/theme";
 
 // Demo Icons - exported from main index to avoid deep-path imports
@@ -30,6 +32,8 @@ export {
   DeviceManagerIcon,
   SiteIcon,
   WarningTriangle,
+  MenuIcon,
+  MoreVerticalIcon,
   SvgIcon,
   iconRegistry,
   getIcon,
@@ -40,6 +44,8 @@ export type {
   DeviceManagerIconProps,
   SiteIconProps,
   WarningTriangleProps,
+  MenuIconProps,
+  MoreVerticalIconProps,
   SvgIconProps,
   IconInfo,
 } from "./components/Icon/icons/demo";

@@ -18,3 +18,9 @@ export type { SiteIconProps } from "./SiteIcon";
 
 export { WarningTriangle } from "./WarningTriangle";
 export type { WarningTriangleProps } from "./WarningTriangle";
+
+export { MenuIcon } from "./MenuIcon";
+export type { MenuIconProps } from "./MenuIcon";
+
+export { MoreVerticalIcon } from "./MoreVerticalIcon";
+export type { MoreVerticalIconProps } from "./MoreVerticalIcon";
