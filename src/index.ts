@@ -24,6 +24,8 @@ export type { BottomNavigationProps } from "./components/BottomNavigation";
 export type { BottomNavigationActionProps } from "./components/BottomNavigation/BottomNavigationAction";
 export { default as AppBar } from "./components/AppBar";
 export type { AppBarProps } from "./components/AppBar";
+export { default as Toolbar } from "./components/Toolbar";
+export type { ToolbarProps } from "./components/Toolbar";
 export * from "./components/theme";
 
 // Demo Icons - exported from main index to avoid deep-path imports

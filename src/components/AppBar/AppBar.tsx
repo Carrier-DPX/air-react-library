@@ -50,6 +50,8 @@ const AppBar = forwardRef<HTMLDivElement, AppBarProps>(
       }
     };
 
+    const appBarHeight = getHeight();
+
     return (
       <MuiAppBar
         {...rest}
@@ -58,7 +60,10 @@ const AppBar = forwardRef<HTMLDivElement, AppBarProps>(
         sx={(theme) =>
           ({
             ...getSxStyles(theme, sx),
-            height: getHeight(),
+            height: appBarHeight,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
             ...(divider && {
               borderBottom: `1px solid ${theme.palette.divider}`,
             }),
@@ -82,6 +87,13 @@ const AppBar = forwardRef<HTMLDivElement, AppBarProps>(
               backgroundColor: theme.palette.base?.dark,
               color: theme.palette.base?.contrastText,
             }),
+            // Ensure Toolbar inside matches AppBar height and centers content
+            "& .MuiToolbar-root": {
+              minHeight: appBarHeight,
+              height: appBarHeight,
+              display: "flex",
+              alignItems: "center",
+            },
           } as CSSObject)
         }
         ref={ref}

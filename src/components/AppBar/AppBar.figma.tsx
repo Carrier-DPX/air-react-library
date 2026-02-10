@@ -6,7 +6,7 @@
 
 import figma from "@figma/code-connect";
 import AppBar from "./AppBar";
-import { Toolbar } from "@mui/material";
+import Toolbar from "../Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "../Typography";
 import Button from "../Button";
