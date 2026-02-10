@@ -5,7 +5,7 @@ import { CSSObject } from "@mui/material/styles";
 
 import { getSxStyles } from "../utils/styles";
 
-export interface AppBarProps extends Omit<MuiAppBarProps, "color"> {
+export interface AppBarProps extends Omit<MuiAppBarProps, "color" | "elevation"> {
   color?: "paper" | "accent" | "transparent" | "primary" | "base";
   /**
    * Size of the AppBar
