@@ -591,13 +591,13 @@ const fleetComponents: Components = {
     },
     styleOverrides: {
       root: {
-        fontSize: "18px",
+        fontSize: "24px",
       },
       fontSizeSmall: {
-        fontSize: "15px",
+        fontSize: "20px",
       },
       fontSizeLarge: {
-        fontSize: "21px",
+        fontSize: "28px",
       },
       fontSizeInherit: {
         fontSize: "inherit",
@@ -607,7 +607,7 @@ const fleetComponents: Components = {
       {
         props: { fontSize: "xsmall" },
         style: {
-          fontSize: "12px",
+          fontSize: "16px",
         },
       },
     ],
