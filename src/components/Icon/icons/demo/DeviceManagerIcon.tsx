@@ -4,9 +4,15 @@ export interface DeviceManagerIconProps extends SVGProps<SVGSVGElement> {
   variant?: "outlined" | "filled";
 }
 
-export const DeviceManagerIcon: FC<DeviceManagerIconProps> = ({ variant = "outlined", ...props }) => {
+export const DeviceManagerIcon: FC<DeviceManagerIconProps> = ({ variant = "outlined", style, ...props }) => {
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg" 
+      style={{ width: "1em", height: "1em", display: "block", ...style }}
+      {...props}
+    >
       <path d="M2.49805 18.041C3.75805 18.2505 4.74948 19.2419 4.95898 20.502C5.00427 20.7744 4.77614 21 4.5 21H3C2.44772 21 2 20.5523 2 20V18.5C2 18.2239 2.22564 17.9957 2.49805 18.041Z" fill="currentColor"/>
       <path d="M2.5 14.0176C5.97085 14.2618 8.73818 17.0292 8.98242 20.5C9.00176 20.7754 8.77612 21 8.5 21H7.5C7.22396 21 7.003 20.7756 6.97559 20.501C6.7411 18.1393 4.86065 16.2589 2.49902 16.0244C2.22437 15.997 2 15.776 2 15.5V14.5C2 14.2239 2.22457 13.9982 2.5 14.0176Z" fill="currentColor"/>
       <path d="M2.5 10.0107C8.17278 10.2648 12.7351 14.8187 12.9893 20.5C13.0015 20.7758 12.7761 21 12.5 21H11.5C11.2239 21 11.0014 20.7757 10.9863 20.5C10.7359 15.928 7.07198 12.2641 2.5 12.0137C2.22427 11.9986 2 11.7761 2 11.5V10.5C2 10.2239 2.22424 9.99852 2.5 10.0107Z" fill="currentColor"/>
