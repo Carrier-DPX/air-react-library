@@ -1,7 +1,7 @@
 /**
  * Figma Code Connect Configuration for Avatar Component
  * 
- * Figma URL: https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=6587-47403
+ * Figma URL: https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=40377-292
  * 
  * Figma Properties:
  * - variant (circle, rounded)
@@ -16,7 +16,7 @@ import Icon from "../Icon";
 
 figma.connect(
   Avatar,
-  "https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=6587-47403",
+  "https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=40377-292",
   {
     props: {
       /**
