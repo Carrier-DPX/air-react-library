@@ -1,7 +1,7 @@
 import { FC, SyntheticEvent, useState } from "react";
 import Tooltip, { TooltipProps } from "../../Tooltip";
 import Typography from "../../Typography";
-import Fade from "../../Fade";
+import { Fade } from "@mui/material";
 import { useNavbarContext } from "../hooks/useNavbarContext";
 
 /**
