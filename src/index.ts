@@ -26,6 +26,8 @@ export { default as AppBar } from "./components/AppBar";
 export type { AppBarProps } from "./components/AppBar";
 export { default as Toolbar } from "./components/Toolbar";
 export type { ToolbarProps } from "./components/Toolbar";
+export { default as IconButton } from "./components/IconButton";
+export type { IconButtonProps } from "./components/IconButton";
 export * from "./components/theme";
 
 // Demo Icons - exported from main index to avoid deep-path imports
