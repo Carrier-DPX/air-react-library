@@ -64,13 +64,6 @@ figma.connect(
       letter: figma.string("✏️ Letter"),
 
       /**
-       * IMAGE SOURCE
-       * Maps image source when type="image"
-       * Note: This would need to be mapped from Figma's image fill property
-       */
-      src: figma.string("Image"),
-
-      /**
        * ICON NESTED PROPERTIES
        * Access Icon's fontSize and SVG through nested properties
        * Used when type="icon"
@@ -90,13 +83,7 @@ figma.connect(
      * EXAMPLE CODE TEMPLATE
      * Shows how Avatar should be used based on type
      */
-    example: ({ variant, size, type, letter, src, icon }) => {
-      if (type === "image") {
-        return (
-          <Avatar variant={variant} size={size} src={src} />
-        );
-      }
-      
+    example: ({ variant, size, type, letter, icon }) => {
       if (type === "icon") {
         return (
           <Avatar variant={variant} size={size}>
@@ -107,7 +94,7 @@ figma.connect(
         );
       }
       
-      // Default to letter type
+      // Default to letter type (or image if src is provided via sx)
       return (
         <Avatar variant={variant} size={size}>
           {letter}
