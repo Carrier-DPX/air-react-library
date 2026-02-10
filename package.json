@@ -4,6 +4,16 @@
   "description": "Air web React component library for Figma Make",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "module": "src/index.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./src/index.ts",
+      "types": "./src/index.ts"
+    },
+    "./*": "./src/*"
+  },
   "files": [
     "src",
     "README.md"
