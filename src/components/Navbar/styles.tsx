@@ -9,7 +9,7 @@ import {
   navBorder,
 } from "./constants";
 import { StyledComponentDefaultProps } from "../types/common";
-import { styleTokens } from "src/components/theme/constants/styleTokens";
+import { styleTokens } from "../theme/constants/styleTokens";
 import { NavbarProps } from "./types";
 
 export default {

@@ -6,7 +6,7 @@ import { NavbarLogoProps } from "./types";
 import { useNavbarContext } from "../hooks/useNavbarContext";
 import Box from "../../Box";
 import Button from "../../Button";
-import Zoom from "../../Zoom/Zoom";
+import { Zoom } from "@mui/material";
 import { NavbarTooltip } from "../NavbarButtons";
 import { NavbarButtonClasses } from "../NavbarButtons/types";
 

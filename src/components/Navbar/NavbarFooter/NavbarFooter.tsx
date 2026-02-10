@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import { NavbarFooterProps } from "./types";
 import footerStyles from "./styles";
 import Box from "../../Box";
-import SvgIcon from "src/components/SvgIcon";
+import SvgIcon from "../../Icon/icons/demo/SvgIcon";
 
 /**
  * The NavbarFooter component allows adding buttons to the footer.
