@@ -23,3 +23,23 @@ export { default as BottomNavigationAction } from "./components/BottomNavigation
 export type { BottomNavigationProps } from "./components/BottomNavigation";
 export type { BottomNavigationActionProps } from "./components/BottomNavigation/BottomNavigationAction";
 export * from "./components/theme";
+
+// Demo Icons - exported from main index to avoid deep-path imports
+export {
+  HomeIcon,
+  DeviceManagerIcon,
+  SiteIcon,
+  WarningTriangle,
+  SvgIcon,
+  iconRegistry,
+  getIcon,
+  getIconNames,
+} from "./components/Icon/icons/demo";
+export type {
+  HomeIconProps,
+  DeviceManagerIconProps,
+  SiteIconProps,
+  WarningTriangleProps,
+  SvgIconProps,
+  IconInfo,
+} from "./components/Icon/icons/demo";
