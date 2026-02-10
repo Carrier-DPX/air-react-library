@@ -55,7 +55,7 @@ figma.connect(
 
       /**
        * POSITION
-       * AppBar position prop
+       * AppBar position prop (optional)
        */
       position: figma.enum("position", {
         static: "static",
@@ -77,7 +77,7 @@ figma.connect(
         color={color} 
         divider={divider} 
         elevation={elevation}
-        position={position || "static"}
+        position={position}
       >
         <Toolbar>
           <IconButton
