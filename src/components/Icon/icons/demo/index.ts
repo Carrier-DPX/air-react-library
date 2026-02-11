@@ -24,3 +24,12 @@ export type { MenuIconProps } from "./MenuIcon";
 
 export { MoreVerticalIcon } from "./MoreVerticalIcon";
 export type { MoreVerticalIconProps } from "./MoreVerticalIcon";
+
+export { NotificationsIcon } from "./NotificationsIcon";
+export type { NotificationsIconProps } from "./NotificationsIcon";
+
+export { AccountCircleIcon } from "./AccountCircleIcon";
+export type { AccountCircleIconProps } from "./AccountCircleIcon";
+
+export { ChevronLeftIcon } from "./ChevronLeftIcon";
+export type { ChevronLeftIconProps } from "./ChevronLeftIcon";

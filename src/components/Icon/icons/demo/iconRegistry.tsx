@@ -61,6 +61,26 @@ const MoreVerticalSvg: FC<React.SVGProps<SVGSVGElement>> = ({ style, ...props })
   </svg>
 );
 
+const NotificationsSvg: FC<React.SVGProps<SVGSVGElement>> = ({ style, ...props }) => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: "1em", height: "1em", display: "block", ...style }} {...props}>
+    <path d="M14 20C14 20.55 13.8038 21.0204 13.4121 21.4121C13.0204 21.8038 12.55 22 12 22C11.45 22 10.9796 21.8038 10.5879 21.4121C10.1962 21.0204 10 20.55 10 20H14Z" fill="currentColor"/>
+    <path fillRule="evenodd" clipRule="evenodd" d="M12 2C12.4167 2 12.7708 2.14583 13.0625 2.4375C13.3542 2.72917 13.5 3.08333 13.5 3.5V4.2002C14.8333 4.53353 15.9167 5.23751 16.75 6.3125C17.5833 7.3875 18 8.61667 18 10V17H19C19.2833 17 19.5212 17.0954 19.7129 17.2871C19.9046 17.4788 20 17.7167 20 18C20 18.2833 19.9046 18.5212 19.7129 18.7129C19.5212 18.9046 19.2833 19 19 19H5C4.71667 19 4.47878 18.9046 4.28711 18.7129C4.09544 18.5212 4 18.2833 4 18C4 17.7167 4.09544 17.4788 4.28711 17.2871C4.47878 17.0954 4.71667 17 5 17H6V10C6 8.61667 6.41667 7.3875 7.25 6.3125C8.08332 5.23751 9.16669 4.53353 10.5 4.2002V3.5C10.5 3.08333 10.6458 2.72917 10.9375 2.4375C11.2292 2.14583 11.5833 2 12 2ZM12 6C10.9 6 9.95814 6.39147 9.1748 7.1748C8.39147 7.95814 8 8.9 8 10V17H16V10C16 8.9 15.6085 7.95814 14.8252 7.1748C14.0419 6.39147 13.1 6 12 6Z" fill="currentColor"/>
+  </svg>
+);
+
+const AccountCircleSvg: FC<React.SVGProps<SVGSVGElement>> = ({ style, ...props }) => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: "1em", height: "1em", display: "block", ...style }} {...props}>
+    <path fillRule="evenodd" clipRule="evenodd" d="M12 6C13.93 6 15.5 7.57 15.5 9.5C15.5 11.43 13.93 13 12 13C10.07 13 8.5 11.43 8.5 9.5C8.5 7.57 10.07 6 12 6ZM12 8C11.17 8 10.5 8.67 10.5 9.5C10.5 10.33 11.17 11 12 11C12.83 11 13.5 10.33 13.5 9.5C13.5 8.67 12.83 8 12 8Z" fill="currentColor"/>
+    <path fillRule="evenodd" clipRule="evenodd" d="M12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM12 17C10.26 17 8.65961 17.56 7.34961 18.5C8.65961 19.44 10.26 20 12 20C13.74 20 15.3404 19.44 16.6504 18.5C15.3404 17.56 13.74 17 12 17ZM12 4C7.58 4 4 7.58 4 12C4 13.95 4.70035 15.7301 5.86035 17.1201C7.55033 15.8002 9.68007 15 12 15C14.3199 15 16.4497 15.8002 18.1396 17.1201C19.2996 15.7301 20 13.95 20 12C20 7.58 16.42 4 12 4Z" fill="currentColor"/>
+  </svg>
+);
+
+const ChevronLeftSvg: FC<React.SVGProps<SVGSVGElement>> = ({ style, ...props }) => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: "1em", height: "1em", display: "block", ...style }} {...props}>
+    <path d="M14.2998 6.4248C14.5831 6.4248 14.8167 6.51686 15 6.7002C15.1833 6.88352 15.2754 7.1171 15.2754 7.40039C15.2753 7.68345 15.1831 7.91638 15 8.09961L11.0996 12L15 15.9004C15.1831 16.0836 15.2753 16.3166 15.2754 16.5996C15.2754 16.8829 15.1832 17.1165 15 17.2998C14.8167 17.4831 14.5831 17.5752 14.2998 17.5752C14.0165 17.5752 13.7829 17.4831 13.5996 17.2998L9 12.7002C8.9 12.6002 8.82878 12.4917 8.78711 12.375C8.74548 12.2584 8.72461 12.1333 8.72461 12C8.72461 11.8667 8.74547 11.7416 8.78711 11.625C8.82878 11.5083 8.9 11.3998 9 11.2998L13.5996 6.7002C13.7829 6.5169 14.0165 6.42484 14.2998 6.4248Z" fill="currentColor"/>
+  </svg>
+);
+
 // WarningTriangle SVG (previously WarningIcon)
 
 export interface IconInfo {
@@ -98,6 +118,21 @@ export const iconRegistry: Record<string, IconInfo> = {
   morevertical: {
     name: "morevertical",
     component: MoreVerticalSvg,
+    variant: "outlined",
+  },
+  notifications: {
+    name: "notifications",
+    component: NotificationsSvg,
+    variant: "outlined",
+  },
+  accountcircle: {
+    name: "accountcircle",
+    component: AccountCircleSvg,
+    variant: "outlined",
+  },
+  chevronleft: {
+    name: "chevronleft",
+    component: ChevronLeftSvg,
     variant: "outlined",
   },
 };
