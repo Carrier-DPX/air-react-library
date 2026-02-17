@@ -32,6 +32,8 @@ export { default as Avatar, AvatarGroup } from "./components/Avatar";
 export type { AvatarProps, AvatarGroupProps } from "./components/Avatar";
 export { default as MobileStatusBar } from "./components/MobileStatusBar";
 export type { MobileStatusBarProps } from "./components/MobileStatusBar";
+export { default as StatusLed } from "./components/StatusLed";
+export type { StatusLedProps, Severity } from "./components/StatusLed";
 export * from "./components/theme";
 
 // Demo Icons - exported from main index to avoid deep-path imports
