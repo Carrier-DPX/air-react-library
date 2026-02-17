@@ -113,11 +113,12 @@ figma.connect(
 
       // If label should be shown, wrap with FormControlLabel
       if (showLabel && label) {
+        const placement = labelPosition ? labelPosition : "end";
         return (
           <FormControlLabel
             control={checkbox}
             label={label}
-            labelPlacement={labelPosition || "end"}
+            labelPlacement={placement}
           />
         );
       }
