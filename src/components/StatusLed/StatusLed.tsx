@@ -75,3 +75,4 @@ const StatusLed: React.FC<StatusLedProps> = ({
 };
 
 export default StatusLed;
+export type { StatusLedProps };

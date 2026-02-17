@@ -34,6 +34,14 @@ export { default as MobileStatusBar } from "./components/MobileStatusBar";
 export type { MobileStatusBarProps } from "./components/MobileStatusBar";
 export { default as StatusLed } from "./components/StatusLed";
 export type { StatusLedProps, Severity } from "./components/StatusLed";
+export { default as Backdrop } from "./components/Backdrop";
+export type { BackdropProps } from "./components/Backdrop";
+export { default as Checkbox } from "./components/Checkbox";
+export type { CheckboxProps } from "./components/Checkbox";
+export { default as Radio } from "./components/Radio";
+export type { RadioProps } from "./components/Radio";
+export { default as Switch } from "./components/Switch";
+export type { SwitchProps } from "./components/Switch";
 export * from "./components/theme";
 
 // Demo Icons - exported from main index to avoid deep-path imports
