@@ -86,13 +86,25 @@ figma.connect(
      * EXAMPLE CODE TEMPLATE
      * Shows how StatusLed should be used with optional label
      */
-    example: ({ severity, size, labelPosition, showLabel, label }) => (
-      <StatusLed
-        severity={severity}
-        size={size}
-        labelPosition={labelPosition}
-        label={showLabel ? label : undefined}
-      />
-    ),
+    example: ({ severity, size, labelPosition, showLabel, label }) => {
+      if (showLabel && label) {
+        return (
+          <StatusLed
+            severity={severity}
+            size={size}
+            labelPosition={labelPosition}
+            label={label}
+          />
+        );
+      }
+      
+      return (
+        <StatusLed
+          severity={severity}
+          size={size}
+          labelPosition={labelPosition}
+        />
+      );
+    },
   }
 );
