@@ -74,12 +74,14 @@ figma.connect(
 
       /**
        * LABEL TEXT CONTENT
-       * Maps text property "✏️ Label" from the nested "Label" Typography component
+       * Maps text content from the nested "Label" Typography component
        * The Label is an instance of the Typography component
-       * The text property must be surfaced from the "Label" layer
-       * Only used when showLabel is true
+       * Uses nestedProps to access the Label component's children (text content)
+       * Similar to how Tooltip accesses nested TooltipContent properties
        */
-      label: figma.string("✏️ Label"),
+      label: figma.nestedProps("Label", {
+        children: figma.children("Label"),
+      }),
     },
 
     /**
@@ -93,7 +95,7 @@ figma.connect(
             severity={severity}
             size={size}
             labelPosition={labelPosition}
-            label={label}
+            label={label.children}
           />
         );
       }
