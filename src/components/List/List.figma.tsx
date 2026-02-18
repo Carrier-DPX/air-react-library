@@ -32,18 +32,12 @@ figma.connect(
       subheader: figma.boolean("subheader"),
 
       /**
-       * SUBHEADER NESTED PROPERTIES
-       * Access properties from nested "Subheader" component (layer name "Subheader")
-       * The Subheader is an instance of "ListItems/List Subheader"
+       * SUBHEADER TEXT CONTENT
+       * Maps text content from nested Typography component with layer name "Subheader/↪ Subheader"
+       * Using full path to avoid nested nestedProps
        */
-      subheaderContent: figma.nestedProps("Subheader", {
-        /**
-         * SUBHEADER TEXT CONTENT
-         * Maps text content from nested Typography component with layer name "↪ Subheader"
-         */
-        text: figma.nestedProps("↪ Subheader", {
-          children: figma.children("↪ Subheader"),
-        }),
+      subheaderText: figma.nestedProps("Subheader/↪ Subheader", {
+        children: figma.children("Subheader/↪ Subheader"),
       }),
 
       /**
@@ -69,15 +63,15 @@ figma.connect(
      * Shows how List should be used with optional subheader and ListItem children
      * Note: This example handles up to 10 list items. Adjust based on your design needs.
      */
-    example: ({ subheader, subheaderContent, listItem1, listItem2, listItem3, listItem4, listItem5, listItem6, listItem7, listItem8, listItem9, listItem10 }) => {
+    example: ({ subheader, subheaderText, listItem1, listItem2, listItem3, listItem4, listItem5, listItem6, listItem7, listItem8, listItem9, listItem10 }) => {
       // Handle case with subheader and multiple list items
-      if (subheader && subheaderContent && subheaderContent.text && subheaderContent.text.children) {
+      if (subheader && subheaderText && subheaderText.children) {
         return (
           <List
             subheader={
               <ListSubheader>
                 <Typography variant="body2Semibold">
-                  {subheaderContent.text.children}
+                  {subheaderText.children}
                 </Typography>
               </ListSubheader>
             }

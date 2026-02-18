@@ -66,24 +66,24 @@ figma.connect(
          * When true, shows the Action Button
          */
         action: figma.boolean("action"),
+      }),
 
-        /**
-         * TITLE TEXT CONTENT
-         * Maps text content from nested "Title" Typography component
-         * The Title is an instance of the Typography component
-         */
-        titleText: figma.nestedProps("Title", {
-          children: figma.children("Title"),
-        }),
+      /**
+       * TITLE TEXT CONTENT
+       * Maps text content from nested "Content/Title" Typography component
+       * Using full path to avoid nested nestedProps
+       */
+      titleText: figma.nestedProps("Content/Title", {
+        children: figma.children("Content/Title"),
+      }),
 
-        /**
-         * DESCRIPTION TEXT CONTENT
-         * Maps text content from nested "Description" Typography component
-         * The Description is an instance of the Typography component
-         */
-        descriptionText: figma.nestedProps("Description", {
-          children: figma.children("Description"),
-        }),
+      /**
+       * DESCRIPTION TEXT CONTENT
+       * Maps text content from nested "Content/Description" Typography component
+       * Using full path to avoid nested nestedProps
+       */
+      descriptionText: figma.nestedProps("Content/Description", {
+        children: figma.children("Content/Description"),
       }),
     },
 
@@ -91,9 +91,9 @@ figma.connect(
      * EXAMPLE CODE TEMPLATE
      * Shows how Alert should be used with optional title and action button
      */
-    example: ({ variant, color, content }) => {
+    example: ({ variant, color, content, titleText, descriptionText }) => {
       // Handle case with title, description, and action
-      if (content && content.title && content.action && content.titleText && content.titleText.children && content.descriptionText && content.descriptionText.children) {
+      if (content && content.title && content.action && titleText && titleText.children && descriptionText && descriptionText.children) {
         return (
           <Alert
             variant={variant}
@@ -101,49 +101,49 @@ figma.connect(
             action={<Button variant="text" size="small">Action</Button>}
           >
             <AlertTitle>
-              {content.titleText.children}
+              {titleText.children}
             </AlertTitle>
-            {content.descriptionText.children}
+            {descriptionText.children}
           </Alert>
         );
       }
       
       // Handle case with title and description (no action)
-      if (content && content.title && content.titleText && content.titleText.children && content.descriptionText && content.descriptionText.children) {
+      if (content && content.title && titleText && titleText.children && descriptionText && descriptionText.children) {
         return (
           <Alert
             variant={variant}
             color={color}
           >
             <AlertTitle>
-              {content.titleText.children}
+              {titleText.children}
             </AlertTitle>
-            {content.descriptionText.children}
+            {descriptionText.children}
           </Alert>
         );
       }
       
       // Handle case with description and action (no title)
-      if (content && content.action && content.descriptionText && content.descriptionText.children) {
+      if (content && content.action && descriptionText && descriptionText.children) {
         return (
           <Alert
             variant={variant}
             color={color}
             action={<Button variant="text" size="small">Action</Button>}
           >
-            {content.descriptionText.children}
+            {descriptionText.children}
           </Alert>
         );
       }
       
       // Handle case with only description
-      if (content && content.descriptionText && content.descriptionText.children) {
+      if (descriptionText && descriptionText.children) {
         return (
           <Alert
             variant={variant}
             color={color}
           >
-            {content.descriptionText.children}
+            {descriptionText.children}
           </Alert>
         );
       }

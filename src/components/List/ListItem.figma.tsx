@@ -136,30 +136,33 @@ figma.connect(
          * Maps Figma's "helperText" boolean from nested "Labels" component
          */
         helperText: figma.boolean("helperText"),
+      }),
 
-        /**
-         * HEADER TEXT CONTENT
-         * Maps text content from nested "header" Typography component
-         */
-        headerText: figma.nestedProps("header", {
-          children: figma.children("header"),
-        }),
+      /**
+       * HEADER TEXT CONTENT
+       * Maps text content from nested "Labels/header" Typography component
+       * Using full path to avoid nested nestedProps
+       */
+      headerText: figma.nestedProps("Labels/header", {
+        children: figma.children("Labels/header"),
+      }),
 
-        /**
-         * LABEL TEXT CONTENT
-         * Maps text content from nested "label" Typography component
-         */
-        labelText: figma.nestedProps("label", {
-          children: figma.children("label"),
-        }),
+      /**
+       * LABEL TEXT CONTENT
+       * Maps text content from nested "Labels/label" Typography component
+       * Using full path to avoid nested nestedProps
+       */
+      labelText: figma.nestedProps("Labels/label", {
+        children: figma.children("Labels/label"),
+      }),
 
-        /**
-         * HELPER TEXT CONTENT
-         * Maps text content from nested "helperText" Typography component
-         */
-        helperTextContent: figma.nestedProps("helperText", {
-          children: figma.children("helperText"),
-        }),
+      /**
+       * HELPER TEXT CONTENT
+       * Maps text content from nested "Labels/helperText" Typography component
+       * Using full path to avoid nested nestedProps
+       */
+      helperTextContent: figma.nestedProps("Labels/helperText", {
+        children: figma.children("Labels/helperText"),
       }),
     },
 
@@ -167,9 +170,9 @@ figma.connect(
      * EXAMPLE CODE TEMPLATE
      * Shows how ListItem should be used with optional labels, adornments, and AccentIndicators
      */
-    example: ({ size, padded, selected, disabled, disableGutters, divider, labels, statusStart, statusEnd }) => {
+    example: ({ size, padded, selected, disabled, disableGutters, divider, labels, statusStart, statusEnd, headerText, labelText, helperTextContent }) => {
       // Handle case with header, label, and helperText
-      if (labels && labels.header && labels.headerText && labels.headerText.children && labels.label && labels.labelText && labels.labelText.children && labels.helperText && labels.helperTextContent && labels.helperTextContent.children) {
+      if (labels && labels.header && headerText && headerText.children && labels.label && labelText && labelText.children && labels.helperText && helperTextContent && helperTextContent.children) {
         return (
           <ListItem
             size={size}
@@ -181,11 +184,11 @@ figma.connect(
           >
             {statusStart}
             <Typography variant="body1Semibold">
-              {labels.headerText.children}
+              {headerText.children}
             </Typography>
             <ListItemText
-              primary={labels.labelText.children}
-              secondary={labels.helperTextContent.children}
+              primary={labelText.children}
+              secondary={helperTextContent.children}
             />
             {statusEnd}
           </ListItem>
@@ -193,7 +196,7 @@ figma.connect(
       }
 
       // Handle case with header and label (no helperText)
-      if (labels && labels.header && labels.headerText && labels.headerText.children && labels.label && labels.labelText && labels.labelText.children) {
+      if (labels && labels.header && headerText && headerText.children && labels.label && labelText && labelText.children) {
         return (
           <ListItem
             size={size}
@@ -205,10 +208,10 @@ figma.connect(
           >
             {statusStart}
             <Typography variant="body1Semibold">
-              {labels.headerText.children}
+              {headerText.children}
             </Typography>
             <ListItemText
-              primary={labels.labelText.children}
+              primary={labelText.children}
             />
             {statusEnd}
           </ListItem>
@@ -216,7 +219,7 @@ figma.connect(
       }
 
       // Handle case with label and helperText (no header)
-      if (labels && labels.label && labels.labelText && labels.labelText.children && labels.helperText && labels.helperTextContent && labels.helperTextContent.children) {
+      if (labels && labels.label && labelText && labelText.children && labels.helperText && helperTextContent && helperTextContent.children) {
         return (
           <ListItem
             size={size}
@@ -228,8 +231,8 @@ figma.connect(
           >
             {statusStart}
             <ListItemText
-              primary={labels.labelText.children}
-              secondary={labels.helperTextContent.children}
+              primary={labelText.children}
+              secondary={helperTextContent.children}
             />
             {statusEnd}
           </ListItem>
@@ -237,7 +240,7 @@ figma.connect(
       }
 
       // Handle case with only label
-      if (labels && labels.label && labels.labelText && labels.labelText.children) {
+      if (labels && labels.label && labelText && labelText.children) {
         return (
           <ListItem
             size={size}
@@ -249,7 +252,7 @@ figma.connect(
           >
             {statusStart}
             <ListItemText
-              primary={labels.labelText.children}
+              primary={labelText.children}
             />
             {statusEnd}
           </ListItem>
@@ -257,7 +260,7 @@ figma.connect(
       }
 
       // Handle case with only header
-      if (labels && labels.header && labels.headerText && labels.headerText.children) {
+      if (labels && labels.header && headerText && headerText.children) {
         return (
           <ListItem
             size={size}
@@ -269,7 +272,7 @@ figma.connect(
           >
             {statusStart}
             <Typography variant="body1Semibold">
-              {labels.headerText.children}
+              {headerText.children}
             </Typography>
             {statusEnd}
           </ListItem>
