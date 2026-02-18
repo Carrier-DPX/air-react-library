@@ -108,31 +108,190 @@ figma.connect(
      * Currently generating id from label as fallback.
      */
     example: ({ activeButtonType, active, disabled, tooltip, divider, label, id, icon }) => {
-      const disableTooltip = !tooltip;
-      
       if (divider) {
         return <Divider sx={{ margin: "9px 0" }} />;
       }
       
-      const labelText = label && label.children ? label.children : undefined;
-      const iconFontSize = icon && icon.fontSize ? icon.fontSize : "medium";
-      const iconSvg = icon && icon.children ? icon.children : null;
+      // Handle case with icon and label
+      if (icon && icon.children && label && label.children) {
+        if (tooltip) {
+          if (icon.fontSize) {
+            return (
+              <NavigationButton
+                data={{ id: id, label: label.children }}
+                activeButtonType={activeButtonType}
+                active={active}
+                disabled={disabled}
+                disableTooltip={false}
+                onClick={() => {}}
+              >
+                <Icon fontSize={icon.fontSize}>
+                  {icon.children}
+                </Icon>
+              </NavigationButton>
+            );
+          }
+          return (
+            <NavigationButton
+              data={{ id: id, label: label.children }}
+              activeButtonType={activeButtonType}
+              active={active}
+              disabled={disabled}
+              disableTooltip={false}
+              onClick={() => {}}
+            >
+              <Icon fontSize="medium">
+                {icon.children}
+              </Icon>
+            </NavigationButton>
+          );
+        }
+        if (icon.fontSize) {
+          return (
+            <NavigationButton
+              data={{ id: id, label: label.children }}
+              activeButtonType={activeButtonType}
+              active={active}
+              disabled={disabled}
+              disableTooltip={true}
+              onClick={() => {}}
+            >
+              <Icon fontSize={icon.fontSize}>
+                {icon.children}
+              </Icon>
+            </NavigationButton>
+          );
+        }
+        return (
+          <NavigationButton
+            data={{ id: id, label: label.children }}
+            activeButtonType={activeButtonType}
+            active={active}
+            disabled={disabled}
+            disableTooltip={true}
+            onClick={() => {}}
+          >
+            <Icon fontSize="medium">
+              {icon.children}
+            </Icon>
+          </NavigationButton>
+        );
+      }
+      
+      // Handle case with icon but no label
+      if (icon && icon.children) {
+        if (tooltip) {
+          if (icon.fontSize) {
+            return (
+              <NavigationButton
+                data={{ id: id }}
+                activeButtonType={activeButtonType}
+                active={active}
+                disabled={disabled}
+                disableTooltip={false}
+                onClick={() => {}}
+              >
+                <Icon fontSize={icon.fontSize}>
+                  {icon.children}
+                </Icon>
+              </NavigationButton>
+            );
+          }
+          return (
+            <NavigationButton
+              data={{ id: id }}
+              activeButtonType={activeButtonType}
+              active={active}
+              disabled={disabled}
+              disableTooltip={false}
+              onClick={() => {}}
+            >
+              <Icon fontSize="medium">
+                {icon.children}
+              </Icon>
+            </NavigationButton>
+          );
+        }
+        if (icon.fontSize) {
+          return (
+            <NavigationButton
+              data={{ id: id }}
+              activeButtonType={activeButtonType}
+              active={active}
+              disabled={disabled}
+              disableTooltip={true}
+              onClick={() => {}}
+            >
+              <Icon fontSize={icon.fontSize}>
+                {icon.children}
+              </Icon>
+            </NavigationButton>
+          );
+        }
+        return (
+          <NavigationButton
+            data={{ id: id }}
+            activeButtonType={activeButtonType}
+            active={active}
+            disabled={disabled}
+            disableTooltip={true}
+            onClick={() => {}}
+          >
+            <Icon fontSize="medium">
+              {icon.children}
+            </Icon>
+          </NavigationButton>
+        );
+      }
+      
+      // Fallback without icon
+      if (label && label.children) {
+        if (tooltip) {
+          return (
+            <NavigationButton
+              data={{ id: id, label: label.children }}
+              activeButtonType={activeButtonType}
+              active={active}
+              disabled={disabled}
+              disableTooltip={false}
+              onClick={() => {}}
+            />
+          );
+        }
+        return (
+          <NavigationButton
+            data={{ id: id, label: label.children }}
+            activeButtonType={activeButtonType}
+            active={active}
+            disabled={disabled}
+            disableTooltip={true}
+            onClick={() => {}}
+          />
+        );
+      }
+      
+      if (tooltip) {
+        return (
+          <NavigationButton
+            data={{ id: id }}
+            activeButtonType={activeButtonType}
+            active={active}
+            disabled={disabled}
+            disableTooltip={false}
+            onClick={() => {}}
+          />
+        );
+      }
       
       return (
         <NavigationButton
-          data={{ id: id, label: labelText }}
+          data={{ id: id }}
           activeButtonType={activeButtonType}
           active={active}
           disabled={disabled}
-          disableTooltip={disableTooltip}
+          disableTooltip={true}
           onClick={() => {}}
-        >
-          {iconSvg && (
-            <Icon fontSize={iconFontSize}>
-              {iconSvg}
-            </Icon>
-          )}
-        </NavigationButton>
+        />
       );
     },
   }
