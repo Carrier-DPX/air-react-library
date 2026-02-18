@@ -1,0 +1,116 @@
+/**
+ * Figma Code Connect Configuration for List Component
+ * 
+ * Figma URL: https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=19353-120893
+ * 
+ * Figma Properties:
+ * - subheader (true, false) - boolean hide/show
+ * 
+ * Structure:
+ * - Container: Frame wrapping Subheader and ListItem components
+ * - Subheader: Nested component "ListItems/List Subheader" with layer name "Subheader"
+ *   - Contains Typography component with layer name "↪ Subheader"
+ * - List Item 1-10: Multiple ListItem instances with numbered layer names
+ */
+
+import figma from "@figma/code-connect";
+import List from "./List";
+import ListSubheader from "./ListSubheader";
+import ListItem from "./ListItem";
+import Typography from "../Typography";
+
+figma.connect(
+  List,
+  "https://www.figma.com/design/vkoHdM6rchIhH9IWetZeP0/Air--Components?node-id=19353-120893",
+  {
+    props: {
+      /**
+       * SUBHEADER VISIBILITY
+       * Maps Figma's "subheader" boolean property
+       * When true, shows the nested "Subheader" component
+       */
+      subheader: figma.boolean("subheader"),
+
+      /**
+       * SUBHEADER NESTED PROPERTIES
+       * Access properties from nested "Subheader" component (layer name "Subheader")
+       * The Subheader is an instance of "ListItems/List Subheader"
+       */
+      subheaderContent: figma.nestedProps("Subheader", {
+        /**
+         * SUBHEADER TEXT CONTENT
+         * Maps text content from nested Typography component with layer name "↪ Subheader"
+         */
+        text: figma.nestedProps("↪ Subheader", {
+          children: figma.children("↪ Subheader"),
+        }),
+      }),
+
+      /**
+       * LIST ITEM CHILDREN
+       * Maps nested ListItem instances from Figma
+       * Each "List Item X" is an instance of the ListItem component
+       * We map each one individually using the exact layer names
+       */
+      listItem1: figma.children("List Item 1"),
+      listItem2: figma.children("List Item 2"),
+      listItem3: figma.children("List Item 3"),
+      listItem4: figma.children("List Item 4"),
+      listItem5: figma.children("List Item 5"),
+      listItem6: figma.children("List Item 6"),
+      listItem7: figma.children("List Item 7"),
+      listItem8: figma.children("List Item 8"),
+      listItem9: figma.children("List Item 9"),
+      listItem10: figma.children("List Item 10"),
+    },
+
+    /**
+     * EXAMPLE CODE TEMPLATE
+     * Shows how List should be used with optional subheader and ListItem children
+     * Note: This example handles up to 10 list items. Adjust based on your design needs.
+     */
+    example: ({ subheader, subheaderContent, listItem1, listItem2, listItem3, listItem4, listItem5, listItem6, listItem7, listItem8, listItem9, listItem10 }) => {
+      // Handle case with subheader and multiple list items
+      if (subheader && subheaderContent && subheaderContent.text && subheaderContent.text.children) {
+        return (
+          <List
+            subheader={
+              <ListSubheader>
+                <Typography variant="body2Semibold">
+                  {subheaderContent.text.children}
+                </Typography>
+              </ListSubheader>
+            }
+          >
+            {listItem1}
+            {listItem2}
+            {listItem3}
+            {listItem4}
+            {listItem5}
+            {listItem6}
+            {listItem7}
+            {listItem8}
+            {listItem9}
+            {listItem10}
+          </List>
+        );
+      }
+
+      // Handle case without subheader
+      return (
+        <List>
+          {listItem1}
+          {listItem2}
+          {listItem3}
+          {listItem4}
+          {listItem5}
+          {listItem6}
+          {listItem7}
+          {listItem8}
+          {listItem9}
+          {listItem10}
+        </List>
+      );
+    },
+  }
+);

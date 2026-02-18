@@ -42,6 +42,21 @@ export { default as Radio } from "./components/Radio";
 export type { RadioProps } from "./components/Radio";
 export { default as Switch } from "./components/Switch";
 export type { SwitchProps } from "./components/Switch";
+export { default as Alert, AlertTitle } from "./components/Alert";
+export type { AlertProps, AlertTitleProps } from "./components/Alert";
+export * from "./components/List";
+export type {
+  ListProps,
+  ListItemProps,
+  ListItemButtonProps,
+  ListItemTextProps,
+  ListItemIconProps,
+  ListItemSecondaryActionProps,
+  ListItemAvatarProps,
+  ListSubheaderProps,
+} from "./components/List";
+export { default as AccentIndicator } from "./components/AccentIndicator";
+export type { AccentIndicatorProps } from "./components/AccentIndicator";
 export * from "./components/theme";
 
 // Demo Icons - exported from main index to avoid deep-path imports
