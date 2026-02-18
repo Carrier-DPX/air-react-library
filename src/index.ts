@@ -57,6 +57,8 @@ export type {
 } from "./components/List";
 export { default as AccentIndicator } from "./components/AccentIndicator";
 export type { AccentIndicatorProps } from "./components/AccentIndicator";
+export { default as Menu } from "./components/Menu";
+export type { MenuProps } from "./components/Menu";
 export * from "./components/theme";
 
 // Demo Icons - exported from main index to avoid deep-path imports
