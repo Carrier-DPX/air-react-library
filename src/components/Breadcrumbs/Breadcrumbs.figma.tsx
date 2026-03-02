@@ -83,13 +83,26 @@ figma.connect(
      * Note: separator prop handling may need adjustment based on actual implementation
      */
     example: ({ color, separator, breadcrumb01, breadcrumb02, breadcrumb03, breadcrumb04, breadcrumb05, breadcrumb06 }) => {
-      // Determine separator value
-      const separatorValue = separator === "icon" ? undefined : separator;
+      // Handle separator - if icon, use undefined (separator handled by parent), otherwise use the separator string
+      if (separator === "icon") {
+        return (
+          <Breadcrumbs
+            color={color}
+          >
+            {breadcrumb01}
+            {breadcrumb02}
+            {breadcrumb03}
+            {breadcrumb04}
+            {breadcrumb05}
+            {breadcrumb06}
+          </Breadcrumbs>
+        );
+      }
       
       return (
         <Breadcrumbs
           color={color}
-          separator={separatorValue}
+          separator={separator}
         >
           {breadcrumb01}
           {breadcrumb02}
