@@ -40,6 +40,7 @@ figma.connect(
        * purple -> primary, cyan -> info, orange -> warning, pink -> error
        */
       color: figma.enum("color", {
+        base: "base",
         purple: "primary",
         primary: "primary",
         info: "info",
