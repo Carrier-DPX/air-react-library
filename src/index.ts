@@ -59,6 +59,10 @@ export { default as AccentIndicator } from "./components/AccentIndicator";
 export type { AccentIndicatorProps } from "./components/AccentIndicator";
 export { default as Menu } from "./components/Menu";
 export type { MenuProps } from "./components/Menu";
+export { default as Tag } from "./components/Tag";
+export type { TagProps } from "./components/Tag";
+export { default as Breadcrumbs, BreadcrumbLink } from "./components/Breadcrumbs";
+export type { BreadcrumbsProps, BreadcrumbLinkProps } from "./components/Breadcrumbs";
 export * from "./components/theme";
 
 // Demo Icons - exported from main index to avoid deep-path imports
