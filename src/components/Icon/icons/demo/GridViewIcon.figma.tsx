@@ -1,7 +1,7 @@
 /**
  * Figma Code Connect Configuration for GridViewIcon
  * 
- * Figma URL: https://www.figma.com/design/RT43n0bKuuIt7ylllD3DR0/Icon-Library?node-id=346-1472
+ * Figma URL: https://www.figma.com/design/RT43n0bKuuIt7ylllD3DR0/Icon-Library?node-id=346-1469
  */
 
 import figma from "@figma/code-connect";
@@ -10,7 +10,7 @@ import { GridViewIcon } from "./GridViewIcon";
 
 figma.connect(
   GridViewIcon,
-  "https://www.figma.com/design/RT43n0bKuuIt7ylllD3DR0/Icon-Library?node-id=346-1472",
+  "https://www.figma.com/design/RT43n0bKuuIt7ylllD3DR0/Icon-Library?node-id=346-1469",
   {
     props: {
       /**

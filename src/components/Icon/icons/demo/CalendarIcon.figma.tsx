@@ -1,7 +1,7 @@
 /**
  * Figma Code Connect Configuration for CalendarIcon
  * 
- * Figma URL: https://www.figma.com/design/RT43n0bKuuIt7ylllD3DR0/Icon-Library?node-id=13-233
+ * Figma URL: https://www.figma.com/design/RT43n0bKuuIt7ylllD3DR0/Icon-Library?node-id=13-236
  */
 
 import figma from "@figma/code-connect";
@@ -10,7 +10,7 @@ import { CalendarIcon } from "./CalendarIcon";
 
 figma.connect(
   CalendarIcon,
-  "https://www.figma.com/design/RT43n0bKuuIt7ylllD3DR0/Icon-Library?node-id=13-233",
+  "https://www.figma.com/design/RT43n0bKuuIt7ylllD3DR0/Icon-Library?node-id=13-236",
   {
     props: {
       /**
