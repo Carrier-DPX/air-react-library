@@ -5,6 +5,10 @@ import { SimplePaletteColorOptions } from "@mui/material/styles/createPalette";
 import { Severity } from "./types";
 
 export const getColorInner = (theme: Theme, severity: Severity): string => {
+  if (!severity) {
+    return theme.palette.base?.state?.disabledContent ||
+      lighten(theme.palette.common.black, 0.7);
+  }
   const key = severity.toLowerCase() as keyof PaletteOptions;
   const palette = theme.palette[key] as SimplePaletteColorOptions;
   const finalColor =
@@ -18,6 +22,10 @@ export const getColorInner = (theme: Theme, severity: Severity): string => {
 };
 
 export const getColorOuter = (theme: Theme, severity: Severity): string => {
+  if (!severity) {
+    return theme.palette.base?.state?.disabledContent ||
+      lighten(theme.palette.common.black, 0.8);
+  }
   const key = severity.toLowerCase() as keyof PaletteOptions;
   const palette = theme.palette[key] as SimplePaletteColorOptions;
   const finalColor =

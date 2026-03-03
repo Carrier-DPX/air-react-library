@@ -166,6 +166,7 @@ export const iconRegistry: Record<string, IconInfo> = {
  * Get an icon component by name
  */
 export const getIcon = (name: string): IconInfo | undefined => {
+  if (!name) return undefined;
   return iconRegistry[name.toLowerCase()];
 };
 
