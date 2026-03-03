@@ -63,6 +63,15 @@ export { default as Tag } from "./components/Tag";
 export type { TagProps } from "./components/Tag";
 export { default as Breadcrumbs, BreadcrumbLink } from "./components/Breadcrumbs";
 export type { BreadcrumbsProps, BreadcrumbLinkProps } from "./components/Breadcrumbs";
+export * from "./components/Tabs";
+export type {
+  TabsProps,
+  TabProps,
+  TabListProps,
+  TabPanelProps,
+  TabContextProps,
+  TabScrollButtonProps,
+} from "./components/Tabs";
 export * from "./components/theme";
 
 // Demo Icons - exported from main index to avoid deep-path imports

@@ -50,4 +50,3 @@ const Breadcrumbs = forwardRef<HTMLElement, BreadcrumbsProps>(
 Breadcrumbs.displayName = "Breadcrumbs";
 
 export default Breadcrumbs;
-export type { BreadcrumbsProps };
