@@ -33,3 +33,9 @@ export type { AccountCircleIconProps } from "./AccountCircleIcon";
 
 export { ChevronLeftIcon } from "./ChevronLeftIcon";
 export type { ChevronLeftIconProps } from "./ChevronLeftIcon";
+
+export { GridViewIcon } from "./GridViewIcon";
+export type { GridViewIconProps } from "./GridViewIcon";
+
+export { CalendarIcon } from "./CalendarIcon";
+export type { CalendarIconProps } from "./CalendarIcon";

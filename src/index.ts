@@ -85,6 +85,8 @@ export {
   NotificationsIcon,
   AccountCircleIcon,
   ChevronLeftIcon,
+  GridViewIcon,
+  CalendarIcon,
   SvgIcon,
   iconRegistry,
   getIcon,
@@ -100,6 +102,8 @@ export type {
   NotificationsIconProps,
   AccountCircleIconProps,
   ChevronLeftIconProps,
+  GridViewIconProps,
+  CalendarIconProps,
   SvgIconProps,
   IconInfo,
 } from "./components/Icon/icons/demo";
